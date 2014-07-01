@@ -65,6 +65,8 @@ public class DuracloudMillController {
             form.setDbPassword(entity.getDbPassword());
             form.setAuditQueue(entity.getAuditQueue());
             form.setAuditLogSpaceId(entity.getAuditLogSpaceId());
+            form.setAuditQueueType(entity.getAuditQueueType());
+            form.setAuditQueueHost(entity.getAuditQueueHost());
             return form;
         }
     }
@@ -90,7 +92,9 @@ public class DuracloudMillController {
                                             form.getDbUsername(),
                                             form.getDbPassword(),
                                             form.getAuditQueue(),
-                                            form.getAuditLogSpaceId());
+                                            form.getAuditLogSpaceId(),
+                                            form.getAuditQueueType(),
+                                            form.getAuditQueueHost());
         UserFeedbackUtil.addSuccessFlash("Successfully updated!", redirectAttributes);
         return new ModelAndView(new RedirectView(BASE_MAPPING, true));
     }

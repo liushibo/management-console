@@ -41,6 +41,8 @@ public class DuracloudMillConfigServiceImplTest extends EasyMockSupport {
     private static final String password = "password";
     private static final String auditQueue = "auditQueue";
     private static final String auditLogSpaceId = "auditLogSpaceId";
+    private static final String auditQueueType = "AWS";
+    private static final String auditQueueHost = "N/A";
 
     @Mock
     private DuracloudMillRepo repo;
@@ -73,7 +75,7 @@ public class DuracloudMillConfigServiceImplTest extends EasyMockSupport {
         expect(repo.save(EasyMock.capture(saveCapture))).andReturn(null);
         replayAll();
 
-        subject.set(host, port, name, username, password, auditQueue, auditLogSpaceId);
+        subject.set(host, port, name, username, password, auditQueue, auditLogSpaceId, auditQueueType, auditQueueHost);
         DuracloudMill savedMill = saveCapture.getValue();
         assertEquals(host, savedMill.getDbHost());
         assertEquals(port, savedMill.getDbPort());
@@ -82,6 +84,8 @@ public class DuracloudMillConfigServiceImplTest extends EasyMockSupport {
         assertEquals(password, savedMill.getDbPassword());
         assertEquals(auditQueue, savedMill.getAuditQueue());
         assertEquals(auditLogSpaceId, savedMill.getAuditLogSpaceId());
+        assertEquals(auditQueueType, savedMill.getAuditQueueType());
+        assertEquals(auditQueueHost, savedMill.getAuditQueueHost());
     }
 
     @Test
@@ -105,9 +109,13 @@ public class DuracloudMillConfigServiceImplTest extends EasyMockSupport {
         expectLastCall();
         entity.setAuditLogSpaceId(auditLogSpaceId);
         expectLastCall();
+        entity.setAuditQueueType(auditQueueType);
+        expectLastCall();
+        entity.setAuditQueueHost(auditQueueHost);
+        expectLastCall();
         replayAll();
 
-        subject.set(host, port, name, username, password, auditQueue, auditLogSpaceId);
+        subject.set(host, port, name, username, password, auditQueue, auditLogSpaceId, auditQueueType, auditQueueHost);
     }
 
     @After

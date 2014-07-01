@@ -510,7 +510,7 @@
       <dependency>
         <groupId>org.duracloud.db</groupId>
         <artifactId>account-management-db-model</artifactId>
-        <version>${duracloud.db.version}</version>
+        <version>6.1.0</version>
       </dependency>
 
       <dependency>
