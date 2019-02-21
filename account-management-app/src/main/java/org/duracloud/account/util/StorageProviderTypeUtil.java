@@ -32,6 +32,7 @@ public class StorageProviderTypeUtil {
     public static List<StorageProviderType> getAvailableTypes() {
         List<StorageProviderType> types = new ArrayList<>(SECONDARY_PROVIDER_TYPES);
         types.add(0, StorageProviderType.AMAZON_S3);
+        types.add(0, StorageProviderType.SWIFT_S3);
         return types;
     }
 
