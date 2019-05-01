@@ -103,5 +103,5 @@ public class DuracloudMillForm {
     public void setAuditQueueHost(String auditQueueHost) {
         this.auditQueueHost = auditQueueHost;
     }
-    
+
 }
