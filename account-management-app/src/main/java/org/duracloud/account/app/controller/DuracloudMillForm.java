@@ -88,13 +88,20 @@ public class DuracloudMillForm {
         this.auditLogSpaceId = auditLogSpaceId;
     }
 
-    public String getAuditQueueType() { return auditQueueType; }
+    public String getAuditQueueType() {
+        return auditQueueType;
+    }
 
-    public void setAuditQueueType(String auditQueueType) { this.auditQueueType = auditQueueType; }
+    public void setAuditQueueType(String auditQueueType) {
+        this.auditQueueType = auditQueueType;
+    }
 
-    public String getAuditQueueHost() { return auditQueueHost; }
+    public String getAuditQueueHost() {
+        return auditQueueHost;
+    }
 
-    public void setAuditQueueHost(String auditQueueHost) { this.auditQueueHost = auditQueueHost; }
-
-
+    public void setAuditQueueHost(String auditQueueHost) {
+        this.auditQueueHost = auditQueueHost;
+    }
+    
 }
