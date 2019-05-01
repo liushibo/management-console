@@ -143,6 +143,30 @@
       <ol>
         <li>
           <form:label
+                  cssErrorClass="error"
+                  path="auditQueueType">
+            <spring:message
+                    code="duracloudmill.auditQueueType" />
+          </form:label>
+
+          AWS<form:radiobutton
+                  cssErrorClass="error"
+                  path="auditQueueType"
+                  value="AWS"/>
+
+          RabbitMQ<form:radiobutton
+                  cssErrorClass="error"
+                  path="auditQueueType"
+                  value="RabbitMQ"/>
+
+          <form:errors
+                  path="auditQueueType"
+                  cssClass="error"
+                  element="div" />
+        </li>
+
+        <li>
+          <form:label
            cssErrorClass="error"
            path="auditQueue">
             <spring:message
@@ -175,6 +199,25 @@
            path="auditLogSpaceId"
            cssClass="error"
            element="div" />
+        </li>
+
+        <li>
+          <form:label
+                  cssErrorClass="error"
+                  path="auditQueueHost">
+            <spring:message
+                    code="duracloudmill.auditQueueHost" />
+          </form:label>
+
+          <form:input
+                  cssErrorClass="error"
+                  path="auditQueueHost"
+                  disabled="true"/>
+
+          <form:errors
+                  path="auditQueueHost"
+                  cssClass="error"
+                  element="div" />
         </li>
 
       </ol>

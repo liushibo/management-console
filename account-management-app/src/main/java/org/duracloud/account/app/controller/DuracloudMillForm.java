@@ -27,6 +27,10 @@ public class DuracloudMillForm {
     private String auditQueue;
     @NotNull
     private String auditLogSpaceId;
+    @NotNull
+    private String auditQueueType = "AWS";
+    @NotNull
+    private String auditQueueHost = "N/A";
 
     public String getDbHost() {
         return dbHost;
@@ -83,5 +87,14 @@ public class DuracloudMillForm {
     public void setAuditLogSpaceId(String auditLogSpaceId) {
         this.auditLogSpaceId = auditLogSpaceId;
     }
+
+    public String getAuditQueueType() { return auditQueueType; }
+
+    public void setAuditQueueType(String auditQueueType) { this.auditQueueType = auditQueueType; }
+
+    public String getAuditQueueHost() { return auditQueueHost; }
+
+    public void setAuditQueueHost(String auditQueueHost) { this.auditQueueHost = auditQueueHost; }
+
 
 }
