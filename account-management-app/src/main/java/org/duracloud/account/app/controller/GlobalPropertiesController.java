@@ -60,6 +60,11 @@ public class GlobalPropertiesController {
         if (entity == null) {
             return new GlobalPropertiesForm();
         } else {
+            form.setNotifierType(entity.getNotifierType());
+            form.setRabbitmqHost(entity.getRabbitmqHost());
+            form.setRabbitmqExchange(entity.getRabbitmqExchange());
+            form.setRabbitmqUsername(entity.getRabbitmqUsername());
+            form.setRabbitmqPassword(entity.getRabbitmqPassword());
             form.setInstanceNotificationTopicArn(entity.getInstanceNotificationTopicArn());
             form.setCloudFrontAccountId(entity.getCloudFrontAccountId());
             form.setCloudFrontKeyId(entity.getCloudFrontKeyId());
@@ -83,8 +88,12 @@ public class GlobalPropertiesController {
         if (hasErrors) {
             return new ModelAndView(BASE_MAPPING + "/edit");
         }
-
-        this.globalPropertiesConfigService.set(form.getInstanceNotificationTopicArn(),
+        this.globalPropertiesConfigService.set(form.getNotifierType(),
+                                               form.getRabbitmqHost(),
+                                               form.getRabbitmqExchange(),
+                                               form.getRabbitmqUsername(),
+                                               form.getRabbitmqPassword(),
+                                               form.getInstanceNotificationTopicArn(),
                                                form.getCloudFrontAccountId(),
                                                form.getCloudFrontKeyId(),
                                                form.getCloudFrontKeyPath());

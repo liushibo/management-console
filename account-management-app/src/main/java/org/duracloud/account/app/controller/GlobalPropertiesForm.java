@@ -14,6 +14,21 @@ import org.hibernate.validator.constraints.NotBlank;
  */
 public class GlobalPropertiesForm {
     @NotBlank
+    private String notifierType;
+
+    @NotBlank
+    private String rabbitmqHost;
+
+    @NotBlank
+    private String rabbitmqExchange;
+
+    @NotBlank
+    private String rabbitmqUsername;
+
+    @NotBlank
+    private String rabbitmqPassword;
+
+    @NotBlank
     private String instanceNotificationTopicArn;
 
     @NotBlank(message = "You must specify a CloudFront Account Id")
@@ -24,6 +39,46 @@ public class GlobalPropertiesForm {
 
     @NotBlank(message = "You must specify a CloudFront Key Path")
     private String cloudFrontKeyPath;
+
+    public String getNotifierType() {
+        return notifierType;
+    }
+
+    public void setNotifierType(String notifierType) {
+        this.notifierType = notifierType;
+    }
+
+    public String getRabbitmqHost() {
+        return rabbitmqHost;
+    }
+
+    public void setRabbitmqHost(String rabbitmqHost) {
+        this.rabbitmqHost = rabbitmqHost;
+    }
+
+    public String getRabbitmqExchange() {
+        return rabbitmqExchange;
+    }
+
+    public void setRabbitmqExchange(String rabbitmqExchange) {
+        this.rabbitmqExchange = rabbitmqExchange;
+    }
+
+    public String getRabbitmqUsername() {
+        return rabbitmqUsername;
+    }
+
+    public void setRabbitmqUsername(String rabbitmqUsername) {
+        this.rabbitmqUsername = rabbitmqUsername;
+    }
+
+    public String getRabbitmqPassword() {
+        return rabbitmqPassword;
+    }
+
+    public void setRabbitmqPassword(String rabbitmqPassword) {
+        this.rabbitmqPassword = rabbitmqPassword;
+    }
 
     public String getInstanceNotificationTopicArn() {
         return instanceNotificationTopicArn;

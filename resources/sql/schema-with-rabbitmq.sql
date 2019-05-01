@@ -94,11 +94,11 @@ CREATE TABLE `duracloud_mill` (
   `modified` datetime DEFAULT NULL,
   `audit_log_space_id` varchar(255) NOT NULL,
   `audit_queue` varchar(255) NOT NULL,
-  `audit_queue_type` varchar(255) NOT NULL,
-  `rabbitmq-host` varchar(255) NOT NULL,
-  `rabbitmq-exchange` varchar(255) NOT NULL,
-  `rabbitmq-username` varchar(255) NOT NULL,
-  `rabbitmq-password` varchar(255) NOT NULL,
+  `audit_queue_type` varchar(255) DEFAULT 'AWS':,
+  `rabbitmq_host` varchar(255) NOT NULL,
+  `rabbitmq_exchange` varchar(255) NOT NULL,
+  `rabbitmq_username` varchar(255) NOT NULL,
+  `rabbitmq_password` varchar(255) NOT NULL,
   `db_host` varchar(255) NOT NULL,
   `db_name` varchar(255) NOT NULL,
   `db_password` varchar(255) NOT NULL,
@@ -145,7 +145,12 @@ DROP TABLE IF EXISTS `global_properties`;
 CREATE TABLE `global_properties` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `modified` datetime DEFAULT NULL,
+  `notifier_type` varchar(255) DEFAULT 'AWS':,
   `instance_notification_topic_arn` varchar(255) NOT NULL,
+  `rabbitmq_host` varchar(255) NOT NULL,
+  `rabbitmq_exchange` varchar(255) NOT NULL,
+  `rabbitmq_username` varchar(255) NOT NULL,
+  `rabbitmq_password` varchar(255) NOT NULL,
   `cloud_front_account_id` varchar(255) NOT NULL DEFAULT 'cloud front account id',
   `cloud_front_key_id` varchar(255) NOT NULL DEFAULT 'cloud front key id',
   `cloud_front_key_path` varchar(255) NOT NULL DEFAULT 'cloud front key path',
@@ -232,6 +237,19 @@ CREATE TABLE `user_invitation` (
   KEY `FK_nlwoj3r09ksyu15sp9ob5y8gx` (`account_id`),
   CONSTRAINT `FK_nlwoj3r09ksyu15sp9ob5y8gx` FOREIGN KEY (`account_id`) REFERENCES `account_info` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=267 DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `email_template`;
+CREATE TABLE `email_template` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `modified` datetime DEFAULT NULL,
+  `subject` varchar(1000)  NOT NULL,
+  `body` TEXT,
+  `template` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

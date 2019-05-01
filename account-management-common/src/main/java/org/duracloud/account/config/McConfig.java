@@ -20,8 +20,11 @@ public class McConfig {
     private String mcContext;
     private String mcDomain;
 
+    private String notificationType;
     private String notificationUser;
     private String notificationPass;
+    private String notificationHost;
+    private String notificationPort;
     private String notificationFromAddress;
     private String notificationAdminAddress;
 
@@ -35,8 +38,11 @@ public class McConfig {
                     String mcPort,
                     String mcContext,
                     String mcDomain,
+                    String notificationType,
                     String notificationUser,
                     String notificationPass,
+                    String notificationHost,
+                    String notificationPort,
                     String notificationFromAddress,
                     String notificationAdminAddress,
                     String dbHost,
@@ -48,8 +54,11 @@ public class McConfig {
         this.mcPort = mcPort;
         this.mcContext = mcContext;
         this.mcDomain = mcDomain;
+        this.notificationType = notificationType;
         this.notificationUser = notificationUser;
         this.notificationPass = notificationPass;
+        this.notificationHost = notificationHost;
+        this.notificationPort = notificationPort;
         this.notificationFromAddress = notificationFromAddress;
         this.notificationAdminAddress = notificationAdminAddress;
         this.dbHost = dbHost;
@@ -60,54 +69,81 @@ public class McConfig {
     }
 
     public String getMcHost() {
+
         return mcHost;
     }
 
     public String getMcPort() {
+
         return mcPort;
     }
 
     public String getMcContext() {
+
         return mcContext;
     }
 
     public String getMcDomain() {
+
         return mcDomain;
     }
 
+    public String getNotificationType() {
+
+        return notificationType;
+    }
+
     public String getNotificationUser() {
+
         return notificationUser;
     }
 
     public String getNotificationPass() {
+
         return notificationPass;
     }
 
+    public String getNotificationHost() {
+        return notificationHost;
+    }
+
+    public String getNotificationPort() {
+
+        return notificationPort;
+    }
+
     public String getNotificationFromAddress() {
+
         return notificationFromAddress;
     }
 
     public String getNotificationAdminAddress() {
+
         return notificationAdminAddress;
     }
 
     public String getDbHost() {
+
         return dbHost;
     }
 
     public String getDbPort() {
+
         return dbPort;
     }
 
     public String getDbName() {
+
         return dbName;
     }
 
     public String getDbUser() {
+
         return dbUser;
     }
 
     public String getDbPass() {
+
         return dbPass;
     }
 
