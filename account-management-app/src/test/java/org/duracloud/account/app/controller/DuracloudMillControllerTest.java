@@ -46,7 +46,7 @@ public class DuracloudMillControllerTest extends EasyMockSupport {
     String dbPassword = "password";
     String auditQueue = "auditQueue";
     String auditLogSpaceId = "auditLogSpaceId";
-    String auditQueueTyope = "AWS";
+    String auditQueueType = "AWS";
     String auditQueueHost = "N/A";
 
     @After
@@ -71,7 +71,7 @@ public class DuracloudMillControllerTest extends EasyMockSupport {
         expect(mill.getDbPassword()).andReturn(dbPassword);
         expect(mill.getAuditQueue()).andReturn(auditQueue);
         expect(mill.getAuditLogSpaceId()).andReturn(auditLogSpaceId);
-        expect(mill.getAuditQueueType()).andReturn(auditQueueTyope);
+        expect(mill.getAuditQueueType()).andReturn(auditQueueType);
         expect(mill.getAuditQueueHost()).andReturn(auditQueueHost);
 
         expect(this.service.get()).andReturn(mill);
@@ -85,7 +85,7 @@ public class DuracloudMillControllerTest extends EasyMockSupport {
         assertEquals(form.getDbPassword(), dbPassword);
         assertEquals(form.getAuditQueue(), auditQueue);
         assertEquals(form.getAuditLogSpaceId(), auditLogSpaceId);
-        assertEquals(form.getAuditQueueType(), auditQueueTyope);
+        assertEquals(form.getAuditQueueType(), auditQueueType);
         assertEquals(form.getAuditQueueHost(), auditQueueHost);
 
     }
@@ -112,8 +112,10 @@ public class DuracloudMillControllerTest extends EasyMockSupport {
         expect(form.getDbPassword()).andReturn(dbPassword);
         expect(form.getAuditQueue()).andReturn(auditQueue);
         expect(form.getAuditLogSpaceId()).andReturn(auditLogSpaceId);
+        expect(form.getAuditQueueType()).andReturn(auditQueueType);
+        expect(form.getAuditQueueHost()).andReturn(auditQueueHost);
         this.service.set(dbHost, dbPort, dbName, dbUsername, dbPassword,
-                         auditQueue, auditLogSpaceId);
+                         auditQueue, auditLogSpaceId, auditQueueType, auditQueueHost);
         expectLastCall();
 
         expect(

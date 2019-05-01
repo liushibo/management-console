@@ -71,8 +71,16 @@
 						<td><c:out value="${duracloudMill.dbUsername}"/></td>
 					</tr>
 					<tr>
+						<td>Audit Queue Type</td>
+						<td><c:out value="${duracloudMill.auditQueueType}"/></td>
+					</tr>
+					<tr>
 						<td>Audit Queue Name</td>
 						<td><c:out value="${duracloudMill.auditQueue}"/></td>
+					</tr>
+					<tr>
+						<td>Audit Queue Host</td>
+						<td><c:out value="${duracloudMill.auditQueueHost}"/></td>
 					</tr>
 					<tr>
 						<td>Audit Log Space Id</td>

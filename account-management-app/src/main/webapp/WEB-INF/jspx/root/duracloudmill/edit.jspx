@@ -146,7 +146,7 @@
                   cssErrorClass="error"
                   path="auditQueueType">
             <spring:message
-                    code="duracloudmill.auditQueueType" />
+                    text="duracloudmill.auditQueueType" />
           </form:label>
 
           AWS<form:radiobutton
@@ -206,7 +206,7 @@
                   cssErrorClass="error"
                   path="auditQueueHost">
             <spring:message
-                    code="duracloudmill.auditQueueHost" />
+                    text="duracloudmill.auditQueueHost" />
           </form:label>
 
           <form:input
