@@ -25,7 +25,8 @@
     </tiles:putAttribute>
    <tiles:putAttribute
      name="header-extensions">
-      
+     <script type="text/javascript"
+             src="${pageContext.request.contextPath}/static/js/edit-mill-config.js"><!-- --></script>
    </tiles:putAttribute>
 
     <tiles:putAttribute
@@ -146,18 +147,13 @@
                   cssErrorClass="error"
                   path="auditQueueType">
             <spring:message
-                    text="duracloudmill.auditQueueType" />
+                    code="duracloudmill.auditqueuetype" />
           </form:label>
 
-          AWS<form:radiobutton
-                  cssErrorClass="error"
-                  path="auditQueueType"
-                  value="AWS"/>
-
-          RabbitMQ<form:radiobutton
-                  cssErrorClass="error"
-                  path="auditQueueType"
-                  value="RabbitMQ"/>
+          <form:select id="queuetype" cssErrorClass="error" path="auditQueueType">
+            <form:option value="AWS" label="AWS"/>
+            <form:option value="RabbitMQ" label="RabbitMQ" />
+          </form:select>
 
           <form:errors
                   path="auditQueueType"
@@ -201,18 +197,17 @@
            element="div" />
         </li>
 
-        <li>
+        <li id="queuehost-container">
           <form:label
                   cssErrorClass="error"
                   path="auditQueueHost">
             <spring:message
-                    text="duracloudmill.auditQueueHost" />
+                    code="duracloudmill.auditqueuehost" />
           </form:label>
 
-          <form:input
+          <form:input id="queuehost"
                   cssErrorClass="error"
-                  path="auditQueueHost"
-                  disabled="true"/>
+                  path="auditQueueHost" />
 
           <form:errors
                   path="auditQueueHost"
