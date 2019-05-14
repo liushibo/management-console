@@ -30,7 +30,13 @@ public class DuracloudMillForm {
     @NotNull
     private String auditQueueType = "AWS";
     @NotNull
-    private String auditQueueHost = "N/A";
+    private String rabbitmqHost = "N/A";
+    @NotNull
+    private String rabbitmqExchange = "N/A";
+    @NotNull
+    private String rabbitmqUsername = "N/A";
+    @NotNull
+    private String rabbitmqPassword = "N/A";
 
     public String getDbHost() {
         return dbHost;
@@ -96,12 +102,35 @@ public class DuracloudMillForm {
         this.auditQueueType = auditQueueType;
     }
 
-    public String getAuditQueueHost() {
-        return auditQueueHost;
+    public String getRabbitmqHost() {
+        return rabbitmqHost;
     }
 
-    public void setAuditQueueHost(String auditQueueHost) {
-        this.auditQueueHost = auditQueueHost;
+    public void setRabbitmqHost(String rabbitmqHost) {
+        this.rabbitmqHost = rabbitmqHost;
     }
 
+    public String getRabbitmqExchange() {
+        return rabbitmqExchange;
+    }
+
+    public void setRabbitmqExchange(String rabbitmqExchange) {
+        this.rabbitmqExchange = rabbitmqExchange;
+    }
+
+    public String getRabbitmqUsername() {
+        return rabbitmqUsername;
+    }
+
+    public void setRabbitmqUsername(String rabbitmqUsername) {
+        this.rabbitmqUsername = rabbitmqUsername;
+    }
+
+    public String getRabbitmqPassword() {
+        return rabbitmqPassword;
+    }
+
+    public void setRabbitmqPassword(String rabbitmqPassword) {
+        this.rabbitmqPassword = rabbitmqPassword;
+    }
 }

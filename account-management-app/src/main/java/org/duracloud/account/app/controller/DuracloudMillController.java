@@ -66,7 +66,10 @@ public class DuracloudMillController {
             form.setAuditQueue(entity.getAuditQueue());
             form.setAuditLogSpaceId(entity.getAuditLogSpaceId());
             form.setAuditQueueType(entity.getAuditQueueType());
-            form.setAuditQueueHost(entity.getAuditQueueHost());
+            form.setRabbitmqHost(entity.getRabbitmqHost());
+            form.setRabbitmqExchange(entity.getRabbitmqExchange());
+            form.setRabbitmqUsername(entity.getRabbitmqUsername());
+            form.setRabbitmqPassword(entity.getRabbitmqPassword());
             return form;
         }
     }
@@ -94,7 +97,10 @@ public class DuracloudMillController {
                                             form.getAuditQueue(),
                                             form.getAuditLogSpaceId(),
                                             form.getAuditQueueType(),
-                                            form.getAuditQueueHost());
+                                            form.getRabbitmqHost(),
+                                            form.getRabbitmqExchange(),
+                                            form.getRabbitmqUsername(),
+                                            form.getRabbitmqPassword());
         UserFeedbackUtil.addSuccessFlash("Successfully updated!", redirectAttributes);
         return new ModelAndView(new RedirectView(BASE_MAPPING, true));
     }

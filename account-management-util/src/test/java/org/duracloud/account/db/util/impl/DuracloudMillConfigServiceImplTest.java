@@ -42,7 +42,10 @@ public class DuracloudMillConfigServiceImplTest extends EasyMockSupport {
     private static final String auditQueue = "auditQueue";
     private static final String auditLogSpaceId = "auditLogSpaceId";
     private static final String auditQueueType = "AWS";
-    private static final String auditQueueHost = "N/A";
+    private static final String rabbitmqHost = "N/A";
+    private static final String rabbitmqExhange = "N/A";
+    private static final String rabbitmqUsername = "N/A";
+    private static final String rabbitmqPassword = "N/A";
 
     @Mock
     private DuracloudMillRepo repo;
@@ -75,7 +78,7 @@ public class DuracloudMillConfigServiceImplTest extends EasyMockSupport {
         expect(repo.save(EasyMock.capture(saveCapture))).andReturn(null);
         replayAll();
 
-        subject.set(host, port, name, username, password, auditQueue, auditLogSpaceId, auditQueueType, auditQueueHost);
+        subject.set(host, port, name, username, password, auditQueue, auditLogSpaceId, auditQueueType, rabbitmqHost, rabbitmqExhange, rabbitmqUsername, rabbitmqPassword);
         DuracloudMill savedMill = saveCapture.getValue();
         assertEquals(host, savedMill.getDbHost());
         assertEquals(port, savedMill.getDbPort());
@@ -85,7 +88,10 @@ public class DuracloudMillConfigServiceImplTest extends EasyMockSupport {
         assertEquals(auditQueue, savedMill.getAuditQueue());
         assertEquals(auditLogSpaceId, savedMill.getAuditLogSpaceId());
         assertEquals(auditQueueType, savedMill.getAuditQueueType());
-        assertEquals(auditQueueHost, savedMill.getAuditQueueHost());
+        assertEquals(rabbitmqHost, savedMill.getRabbitmqHost());
+        assertEquals(rabbitmqExhange, savedMill.getRabbitmqExchange());
+        assertEquals(rabbitmqUsername, savedMill.getRabbitmqUsername());
+        assertEquals(rabbitmqPassword, savedMill.getRabbitmqPassword());
     }
 
     @Test
@@ -111,11 +117,17 @@ public class DuracloudMillConfigServiceImplTest extends EasyMockSupport {
         expectLastCall();
         entity.setAuditQueueType(auditQueueType);
         expectLastCall();
-        entity.setAuditQueueHost(auditQueueHost);
+        entity.setRabbitmqHost(rabbitmqHost);
+        expectLastCall();
+        entity.setRabbitmqExchange(rabbitmqExhange);
+        expectLastCall();
+        entity.setRabbitmqUsername(rabbitmqUsername);
+        expectLastCall();
+        entity.setRabbitmqPassword(rabbitmqPassword);
         expectLastCall();
         replayAll();
 
-        subject.set(host, port, name, username, password, auditQueue, auditLogSpaceId, auditQueueType, auditQueueHost);
+        subject.set(host, port, name, username, password, auditQueue, auditLogSpaceId, auditQueueType, rabbitmqHost, rabbitmqExhange, rabbitmqUsername, rabbitmqPassword);
     }
 
     @After

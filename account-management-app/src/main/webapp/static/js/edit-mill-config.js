@@ -1,15 +1,22 @@
 $(document).ready(function () {
     if($("#queuetype").val() === "AWS"){
-        $('#queuehost-container').hide();
+        $(".rabbitmq-config").each(function() {
+            $(this).hide();
+        });
     }
     $("#queuetype").change(function () {
-        if ($(this).val() == "AWS" ) {
-            $("#queuehost").val("N/A");
-            $("#queuehost-container").hide();
+        if ($(this).val() == "AWS") {
+            $(".rabbitmq-config").each(function() {
+                $(this).hide();
+            });
         }
         else {
-            $("#queuehost").val("");
-            $("#queuehost-container").show();
+            $(".rabbitmq-config").each(function() {
+                if($(this).val() === "N/A"){
+                    $(this).val("");
+                }
+                $(this).show();
+            });
         }
     });
 });

@@ -197,20 +197,78 @@
            element="div" />
         </li>
 
-        <li id="queuehost-container">
+        <li class="rabbitmq-config">
           <form:label
                   cssErrorClass="error"
-                  path="auditQueueHost">
+                  path="rabbitmqHost">
             <spring:message
-                    code="duracloudmill.auditqueuehost" />
+                    code="duracloudmill.rabbitmqHost" />
           </form:label>
 
-          <form:input id="queuehost"
+          <form:input id="rabbitmq-host"
                   cssErrorClass="error"
-                  path="auditQueueHost" />
+                  path="rabbitmqHost" />
 
           <form:errors
-                  path="auditQueueHost"
+                  path="rabbitmqHost"
+                  cssClass="error"
+                  element="div" />
+        </li>
+
+
+        <li class="rabbitmq-config">
+          <form:label
+                  cssErrorClass="error"
+                  path="rabbitmqExchange">
+            <spring:message
+                    code="duracloudmill.rabbitmqExchange" />
+          </form:label>
+
+          <form:input id="rabbitmq-exhange"
+                      cssErrorClass="error"
+                      path="rabbitmqExchange" />
+
+          <form:errors
+                  path="rabbitmqExchange"
+                  cssClass="error"
+                  element="div" />
+        </li>
+
+
+        <li class="rabbitmq-config">
+          <form:label
+                  cssErrorClass="error"
+                  path="rabbitmqUsername">
+            <spring:message
+                    code="duracloudmill.rabbitmqUsername" />
+          </form:label>
+
+          <form:input id="rabbitmq-username"
+                      cssErrorClass="error"
+                      path="rabbitmqUsername" />
+
+          <form:errors
+                  path="rabbitmqUsername"
+                  cssClass="error"
+                  element="div" />
+        </li>
+
+
+        <li class="rabbitmq-config">
+          <form:label
+                  cssErrorClass="error"
+                  path="rabbitmqPassword">
+            <spring:message
+                    code="duracloudmill.rabbitmqPassword" />
+          </form:label>
+
+          <form:password id="rabbitmq-pw"
+                         showPassword="true"
+                         cssErrorClass="error"
+                         path="rabbitmqPassword" />
+
+          <form:errors
+                  path="rabbitmqPassword"
                   cssClass="error"
                   element="div" />
         </li>
