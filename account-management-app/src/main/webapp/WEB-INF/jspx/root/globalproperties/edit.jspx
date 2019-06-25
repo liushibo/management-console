@@ -25,7 +25,8 @@
     </tiles:putAttribute>
    <tiles:putAttribute
      name="header-extensions">
-      
+       <script type="text/javascript"
+               src="${pageContext.request.contextPath}/static/js/edit-global-config.js"></script>
    </tiles:putAttribute>
 
     <tiles:putAttribute
@@ -139,7 +140,7 @@
             </li>
 
 
-        <li>
+        <li class="aws-config">
           <form:label
            cssErrorClass="error"
            path="instanceNotificationTopicArn">
