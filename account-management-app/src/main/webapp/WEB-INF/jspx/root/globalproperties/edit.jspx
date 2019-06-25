@@ -42,8 +42,102 @@
       <legend>
         Notification
       </legend>
+        <ol>
+            <li>
+                <form:label
+                        cssErrorClass="error"
+                        path="notifierType">
+                    <spring:message
+                            code="globalproperties.notifiertype" />
+                </form:label>
 
-      <ol>
+                <form:select id="notifierType" cssErrorClass="error" path="notifierType">
+                    <form:option value="AWS" label="AWS"/>
+                    <form:option value="RabbitMQ" label="RabbitMQ" />
+                </form:select>
+
+                <form:errors
+                        path="auditQueueType"
+                        cssClass="error"
+                        element="div" />
+            </li>
+
+            <li class="rabbitmq-config">
+                <form:label
+                        cssErrorClass="error"
+                        path="rabbitmqHost">
+                    <spring:message
+                            code="globalproperties.rabbitmqHost" />
+                </form:label>
+
+                <form:input id="rabbitmq-host"
+                            cssErrorClass="error"
+                            path="rabbitmqHost" />
+
+                <form:errors
+                        path="rabbitmqHost"
+                        cssClass="error"
+                        element="div" />
+            </li>
+
+
+            <li class="rabbitmq-config">
+                <form:label
+                        cssErrorClass="error"
+                        path="rabbitmqExchange">
+                    <spring:message
+                            code="globalproperties.rabbitmqExchange" />
+                </form:label>
+
+                <form:input id="rabbitmq-exhange"
+                            cssErrorClass="error"
+                            path="rabbitmqExchange" />
+
+                <form:errors
+                        path="rabbitmqExchange"
+                        cssClass="error"
+                        element="div" />
+            </li>
+
+
+            <li class="rabbitmq-config">
+                <form:label
+                        cssErrorClass="error"
+                        path="rabbitmqUsername">
+                    <spring:message
+                            code="globalproperties.rabbitmqUsername" />
+                </form:label>
+
+                <form:input id="rabbitmq-username"
+                            cssErrorClass="error"
+                            path="rabbitmqUsername" />
+
+                <form:errors
+                        path="rabbitmqUsername"
+                        cssClass="error"
+                        element="div" />
+            </li>
+
+
+            <li class="rabbitmq-config">
+                <form:label
+                        cssErrorClass="error"
+                        path="rabbitmqPassword">
+                    <spring:message
+                            code="globalproperties.rabbitmqPassword" />
+                </form:label>
+
+                <form:password id="rabbitmq-pw"
+                               showPassword="true"
+                               cssErrorClass="error"
+                               path="rabbitmqPassword" />
+
+                <form:errors
+                        path="rabbitmqPassword"
+                        cssClass="error"
+                        element="div" />
+            </li>
+
 
         <li>
           <form:label

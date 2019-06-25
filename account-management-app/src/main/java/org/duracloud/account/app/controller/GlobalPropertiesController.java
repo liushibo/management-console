@@ -89,7 +89,12 @@ public class GlobalPropertiesController {
             return new ModelAndView(BASE_MAPPING + "/edit");
         }
 
-        this.globalPropertiesConfigService.set(form.getInstanceNotificationTopicArn(),
+        this.globalPropertiesConfigService.set(form.getNotifierType(),
+                                               form.getRabbitmqHost(),
+                                               form.getRabbitmqExchange(),
+                                               form.getRabbitmqUsername(),
+                                               form.getRabbitmqPassword(),
+                                               form.getInstanceNotificationTopicArn(),
                                                form.getCloudFrontAccountId(),
                                                form.getCloudFrontKeyId(),
                                                form.getCloudFrontKeyPath());
