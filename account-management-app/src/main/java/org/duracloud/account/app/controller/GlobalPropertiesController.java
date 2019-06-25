@@ -60,6 +60,11 @@ public class GlobalPropertiesController {
         if (entity == null) {
             return new GlobalPropertiesForm();
         } else {
+            form.setNotifierType(entity.getNotifierType());
+            form.setRabbitmqHost(entity.getRabbitmqHost());
+            form.setRabbitmqExchange(entity.getRabbitmqExchange());
+            form.setRabbitmqUsername(entity.getRabbitmqUsername());
+            form.setRabbitmqPassword(entity.getRabbitmqPassword());
             form.setInstanceNotificationTopicArn(entity.getInstanceNotificationTopicArn());
             form.setCloudFrontAccountId(entity.getCloudFrontAccountId());
             form.setCloudFrontKeyId(entity.getCloudFrontKeyId());
