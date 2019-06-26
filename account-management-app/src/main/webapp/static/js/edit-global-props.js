@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    if($("#notifierType").val() === "AWS"){
+    if($("#notifiertype").val() === "AWS"){
         $(".rabbitmq-config").each(function() {
             $(this).hide();
         });
@@ -8,7 +8,7 @@ $(document).ready(function () {
             $(this).hide();
         });
     }
-    $("#notifierType").change(function () {
+    $("#notifiertype").change(function () {
         if ($(this).val() == "AWS") {
             $(".rabbitmq-config").each(function() {
                 $(this).hide();
@@ -21,7 +21,7 @@ $(document).ready(function () {
             });
         }
         else {
-            $(".aws").each(function() {
+            $(".aws-config").each(function() {
                 $(this).hide();
             });
             $(".rabbitmq-config").each(function() {

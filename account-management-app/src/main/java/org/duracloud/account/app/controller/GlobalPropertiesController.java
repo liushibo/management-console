@@ -88,7 +88,6 @@ public class GlobalPropertiesController {
         if (hasErrors) {
             return new ModelAndView(BASE_MAPPING + "/edit");
         }
-
         this.globalPropertiesConfigService.set(form.getNotifierType(),
                                                form.getRabbitmqHost(),
                                                form.getRabbitmqExchange(),

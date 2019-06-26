@@ -26,7 +26,7 @@
    <tiles:putAttribute
      name="header-extensions">
        <script type="text/javascript"
-               src="${pageContext.request.contextPath}/static/js/edit-global-config.js"></script>
+               src="${pageContext.request.contextPath}/static/js/edit-global-props.js"><!-- --></script>
    </tiles:putAttribute>
 
     <tiles:putAttribute
@@ -52,13 +52,13 @@
                             code="globalproperties.notifiertype" />
                 </form:label>
 
-                <form:select id="notifierType" cssErrorClass="error" path="notifierType">
+                <form:select id="notifiertype" cssErrorClass="error" path="notifierType">
                     <form:option value="AWS" label="AWS"/>
                     <form:option value="RabbitMQ" label="RabbitMQ" />
                 </form:select>
 
                 <form:errors
-                        path="auditQueueType"
+                        path="notifierType"
                         cssClass="error"
                         element="div" />
             </li>
