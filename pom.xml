@@ -207,7 +207,7 @@
     <log.level.default>INFO</log.level.default>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-    <duracloud.artifact.version>6.0.0</duracloud.artifact.version>
+    <duracloud.artifact.version>6.1.0-SNAPSHOT</duracloud.artifact.version>
     <aws.version>1.11.155</aws.version>
     <duracloud.db.version>6.0.0</duracloud.db.version>
     <org.springframework.version>4.2.5.RELEASE</org.springframework.version>
@@ -533,7 +533,7 @@
 
       <dependency>
         <groupId>org.duracloud</groupId>
-        <artifactId>common-sns</artifactId>
+        <artifactId>common-changenotifier</artifactId>
         <version>${duracloud.artifact.version}</version>
       </dependency>
 
@@ -562,6 +562,11 @@
         <version>${duracloud.artifact.version}</version>
       </dependency>
 
+      <dependency>
+        <groupId>org.duracloud</groupId>
+        <artifactId>notification-spring</artifactId>
+        <version>${duracloud.artifact.version}</version>
+      </dependency>
 
       <dependency>
         <groupId>org.duracloud</groupId>

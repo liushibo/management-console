@@ -20,8 +20,11 @@ public class McConfig {
     private String mcContext;
     private String mcDomain;
 
+    private String notificationType;
     private String notificationUser;
     private String notificationPass;
+    private String notificationHost;
+    private String notificationPort;
     private String notificationFromAddress;
     private String notificationAdminAddress;
 
@@ -35,8 +38,11 @@ public class McConfig {
                     String mcPort,
                     String mcContext,
                     String mcDomain,
+                    String notificationType,
                     String notificationUser,
                     String notificationPass,
+                    String notificationHost,
+                    String notificationPort,
                     String notificationFromAddress,
                     String notificationAdminAddress,
                     String dbHost,
@@ -48,8 +54,11 @@ public class McConfig {
         this.mcPort = mcPort;
         this.mcContext = mcContext;
         this.mcDomain = mcDomain;
+        this.notificationType = notificationType;
         this.notificationUser = notificationUser;
         this.notificationPass = notificationPass;
+        this.notificationHost = notificationHost;
+        this.notificationPort = notificationPort;
         this.notificationFromAddress = notificationFromAddress;
         this.notificationAdminAddress = notificationAdminAddress;
         this.dbHost = dbHost;
@@ -75,6 +84,8 @@ public class McConfig {
         return mcDomain;
     }
 
+    public String getNotificationType() { return notificationType; }
+
     public String getNotificationUser() {
         return notificationUser;
     }
@@ -82,6 +93,10 @@ public class McConfig {
     public String getNotificationPass() {
         return notificationPass;
     }
+
+    public String getNotificationHost() { return notificationHost; }
+
+    public String getNotificationPort() { return notificationPort; }
 
     public String getNotificationFromAddress() {
         return notificationFromAddress;
