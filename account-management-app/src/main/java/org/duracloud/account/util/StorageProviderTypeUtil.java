@@ -21,10 +21,8 @@ public class StorageProviderTypeUtil {
 
     static {
         SECONDARY_PROVIDER_TYPES = new ArrayList<>();
-        SECONDARY_PROVIDER_TYPES.add(StorageProviderType.AMAZON_S3);
         SECONDARY_PROVIDER_TYPES.add(StorageProviderType.AMAZON_GLACIER);
         SECONDARY_PROVIDER_TYPES.add(StorageProviderType.CHRONOPOLIS);
-        SECONDARY_PROVIDER_TYPES.add(StorageProviderType.SWIFT_S3);
     }
 
     public static List<StorageProviderType> getAvailableSecondaryTypes() {
@@ -33,7 +31,7 @@ public class StorageProviderTypeUtil {
 
     public static List<StorageProviderType> getAvailableTypes() {
         List<StorageProviderType> types = new ArrayList<>(SECONDARY_PROVIDER_TYPES);
-        // If we ever have primary-only storage types again, they can be added here.
+        types.add(0, StorageProviderType.AMAZON_S3);
         return types;
     }
 

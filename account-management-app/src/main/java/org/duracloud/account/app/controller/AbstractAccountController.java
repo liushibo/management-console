@@ -154,9 +154,6 @@ public abstract class AbstractAccountController extends AbstractController {
             usedTypes.add(secondaryAcct.getProviderType());
         }
 
-        // Also remove the primary type from the available secondary types
-        usedTypes.add(primarySP.getProviderType());
-
         availableProviderTypes.removeAll(usedTypes);
 
         if (availableProviderTypes.size() > 0) {
