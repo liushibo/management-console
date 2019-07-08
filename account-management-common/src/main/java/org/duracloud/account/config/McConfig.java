@@ -69,60 +69,81 @@ public class McConfig {
     }
 
     public String getMcHost() {
+
         return mcHost;
     }
 
     public String getMcPort() {
+
         return mcPort;
     }
 
     public String getMcContext() {
+
         return mcContext;
     }
 
     public String getMcDomain() {
+
         return mcDomain;
     }
 
-    public String getNotificationType() { return notificationType; }
+    public String getNotificationType() {
+
+        return notificationType;
+    }
 
     public String getNotificationUser() {
+
         return notificationUser;
     }
 
     public String getNotificationPass() {
+
         return notificationPass;
     }
 
-    public String getNotificationHost() { return notificationHost; }
+    public String getNotificationHost() {
+        return notificationHost;
+    }
 
-    public String getNotificationPort() { return notificationPort; }
+    public String getNotificationPort() {
+
+        return notificationPort;
+    }
 
     public String getNotificationFromAddress() {
+
         return notificationFromAddress;
     }
 
     public String getNotificationAdminAddress() {
+
         return notificationAdminAddress;
     }
 
     public String getDbHost() {
+
         return dbHost;
     }
 
     public String getDbPort() {
+
         return dbPort;
     }
 
     public String getDbName() {
+
         return dbName;
     }
 
     public String getDbUser() {
+
         return dbUser;
     }
 
     public String getDbPass() {
+
         return dbPass;
     }
 
