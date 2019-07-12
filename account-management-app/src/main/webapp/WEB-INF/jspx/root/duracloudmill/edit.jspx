@@ -205,7 +205,8 @@
                     code="duracloudmill.rabbitmqHost" />
           </form:label>
 
-          <form:input id="rabbitmq-host"
+          <form:input
+                  class="rabbitmq-input"
                   cssErrorClass="error"
                   path="rabbitmqHost" />
 
@@ -224,9 +225,10 @@
                     code="duracloudmill.rabbitmqExchange" />
           </form:label>
 
-          <form:input id="rabbitmq-exhange"
-                      cssErrorClass="error"
-                      path="rabbitmqExchange" />
+          <form:input
+                  class="rabbitmq-input"
+                  cssErrorClass="error"
+                  path="rabbitmqExchange" />
 
           <form:errors
                   path="rabbitmqExchange"
@@ -243,9 +245,10 @@
                     code="duracloudmill.rabbitmqUsername" />
           </form:label>
 
-          <form:input id="rabbitmq-username"
-                      cssErrorClass="error"
-                      path="rabbitmqUsername" />
+          <form:input
+                  class="rabbitmq-input"
+                  cssErrorClass="error"
+                  path="rabbitmqUsername" />
 
           <form:errors
                   path="rabbitmqUsername"
@@ -262,10 +265,11 @@
                     code="duracloudmill.rabbitmqPassword" />
           </form:label>
 
-          <form:password id="rabbitmq-pw"
-                         showPassword="true"
-                         cssErrorClass="error"
-                         path="rabbitmqPassword" />
+          <form:password
+                  class="rabbitmq-input"
+                  showPassword="true"
+                  cssErrorClass="error"
+                  path="rabbitmqPassword" />
 
           <form:errors
                   path="rabbitmqPassword"

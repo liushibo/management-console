@@ -72,6 +72,7 @@
                 </form:label>
 
                 <form:input id="rabbitmq-host"
+                            class="rabbitmq-input"
                             cssErrorClass="error"
                             path="rabbitmqHost" />
 
@@ -91,6 +92,7 @@
                 </form:label>
 
                 <form:input id="rabbitmq-exhange"
+                            class="rabbitmq-input"
                             cssErrorClass="error"
                             path="rabbitmqExchange" />
 
@@ -110,6 +112,7 @@
                 </form:label>
 
                 <form:input id="rabbitmq-username"
+                            class="rabbitmq-input"
                             cssErrorClass="error"
                             path="rabbitmqUsername" />
 
@@ -129,6 +132,7 @@
                 </form:label>
 
                 <form:password id="rabbitmq-pw"
+                               class="rabbitmq-input"
                                showPassword="true"
                                cssErrorClass="error"
                                path="rabbitmqPassword" />
@@ -149,8 +153,9 @@
           </form:label>
 
           <form:input
-           cssErrorClass="error"
-           path="instanceNotificationTopicArn" />
+                  class="aws-input"
+                  cssErrorClass="error"
+                  path="instanceNotificationTopicArn" />
 
           <form:errors
            path="instanceNotificationTopicArn"
@@ -176,8 +181,9 @@
           </form:label>
 
           <form:input
-           cssErrorClass="error"
-           path="cloudFrontAccountId" />
+                  class="cloudfront-input"
+                  cssErrorClass="error"
+                  path="cloudFrontAccountId" />
 
           <form:errors
            path="cloudFrontAccountId"
@@ -194,8 +200,9 @@
           </form:label>
 
           <form:input
-           cssErrorClass="error"
-           path="cloudFrontKeyId" />
+                  class="cloudfront-input"
+                  cssErrorClass="error"
+                  path="cloudFrontKeyId" />
 
           <form:errors
            path="cloudFrontKeyId"
@@ -212,8 +219,9 @@
           </form:label>
 
           <form:input
-           cssErrorClass="error"
-           path="cloudFrontKeyPath" />
+                  class="cloudfront-input"
+                  cssErrorClass="error"
+                  path="cloudFrontKeyPath" />
 
           <form:errors
            path="cloudFrontKeyPath"
