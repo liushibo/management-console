@@ -47,10 +47,12 @@ public class DuracloudMillControllerTest extends EasyMockSupport {
     String auditQueue = "auditQueue";
     String auditLogSpaceId = "auditLogSpaceId";
     String auditQueueType = "AWS";
-    String rabbitmqHost = "N/A";
-    String rabbitmqExchange = "N/A";
-    String rabbitmqUsername = "N/A";
-    String rabbitmqPassword = "N/A";
+    String rabbitmqHost = "rmqhost";
+    Integer rabbitmqPort = 5672;
+    String rabbitmqVhost = "rmqvhost";
+    String rabbitmqExchange = "rmqexchange";
+    String rabbitmqUsername = "rmqusername";
+    String rabbitmqPassword = "rmqpassword";
 
     @After
     public void tearDown() {
@@ -76,6 +78,8 @@ public class DuracloudMillControllerTest extends EasyMockSupport {
         expect(mill.getAuditLogSpaceId()).andReturn(auditLogSpaceId);
         expect(mill.getAuditQueueType()).andReturn(auditQueueType);
         expect(mill.getRabbitmqHost()).andReturn(rabbitmqHost);
+        expect(mill.getRabbitmqPort()).andReturn(rabbitmqPort);
+        expect(mill.getRabbitmqVhost()).andReturn(rabbitmqVhost);
         expect(mill.getRabbitmqExchange()).andReturn(rabbitmqExchange);
         expect(mill.getRabbitmqUsername()).andReturn(rabbitmqUsername);
         expect(mill.getRabbitmqPassword()).andReturn(rabbitmqPassword);
@@ -93,6 +97,8 @@ public class DuracloudMillControllerTest extends EasyMockSupport {
         assertEquals(form.getAuditLogSpaceId(), auditLogSpaceId);
         assertEquals(form.getAuditQueueType(), auditQueueType);
         assertEquals(form.getRabbitmqHost(), rabbitmqHost);
+        assertEquals(form.getRabbitmqPort(), rabbitmqPort);
+        assertEquals(form.getRabbitmqVhost(), rabbitmqVhost);
         assertEquals(form.getRabbitmqExchange(), rabbitmqExchange);
         assertEquals(form.getRabbitmqUsername(), rabbitmqUsername);
         assertEquals(form.getRabbitmqPassword(), rabbitmqPassword);
@@ -123,11 +129,15 @@ public class DuracloudMillControllerTest extends EasyMockSupport {
         expect(form.getAuditLogSpaceId()).andReturn(auditLogSpaceId);
         expect(form.getAuditQueueType()).andReturn(auditQueueType);
         expect(form.getRabbitmqHost()).andReturn(rabbitmqHost);
+        expect(form.getRabbitmqPort()).andReturn(rabbitmqPort);
+        expect(form.getRabbitmqVhost()).andReturn(rabbitmqVhost);
         expect(form.getRabbitmqExchange()).andReturn(rabbitmqExchange);
         expect(form.getRabbitmqUsername()).andReturn(rabbitmqUsername);
         expect(form.getRabbitmqPassword()).andReturn(rabbitmqPassword);
         this.service.set(dbHost, dbPort, dbName, dbUsername, dbPassword,
-                         auditQueue, auditLogSpaceId, auditQueueType, rabbitmqHost, rabbitmqExchange, rabbitmqUsername, rabbitmqPassword);
+                         auditQueue, auditLogSpaceId, auditQueueType,
+                         rabbitmqHost, rabbitmqPort, rabbitmqVhost,
+                         rabbitmqExchange, rabbitmqUsername, rabbitmqPassword);
         expectLastCall();
 
         expect(

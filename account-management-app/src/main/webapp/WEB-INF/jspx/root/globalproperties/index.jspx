@@ -64,6 +64,14 @@
                         <td><c:out value="${globalProperties.rabbitmqHost}"/></td>
                     </tr>
                     <tr>
+                        <td>RabbitMQ Port</td>
+                        <td><c:out value="${globalProperties.rabbitmqPort}"/></td>
+                    </tr>
+                    <tr>
+                        <td>RabbitMQ Virtual Host</td>
+                        <td><c:out value="${globalProperties.rabbitmqVhost}"/></td>
+                    </tr>
+                    <tr>
                         <td>RabbitMQ Exchange</td>
                         <td><c:out value="${globalProperties.rabbitmqExchange}"/></td>
                     </tr>

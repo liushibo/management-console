@@ -67,6 +67,8 @@ public class DuracloudMillController {
             form.setAuditLogSpaceId(entity.getAuditLogSpaceId());
             form.setAuditQueueType(entity.getAuditQueueType());
             form.setRabbitmqHost(entity.getRabbitmqHost());
+            form.setRabbitmqPort(entity.getRabbitmqPort());
+            form.setRabbitmqVhost(entity.getRabbitmqVhost());
             form.setRabbitmqExchange(entity.getRabbitmqExchange());
             form.setRabbitmqUsername(entity.getRabbitmqUsername());
             form.setRabbitmqPassword(entity.getRabbitmqPassword());
@@ -98,6 +100,8 @@ public class DuracloudMillController {
                                             form.getAuditLogSpaceId(),
                                             form.getAuditQueueType(),
                                             form.getRabbitmqHost(),
+                                            form.getRabbitmqPort(),
+                                            form.getRabbitmqVhost(),
                                             form.getRabbitmqExchange(),
                                             form.getRabbitmqUsername(),
                                             form.getRabbitmqPassword());

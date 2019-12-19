@@ -62,6 +62,8 @@ public class GlobalPropertiesController {
         } else {
             form.setNotifierType(entity.getNotifierType());
             form.setRabbitmqHost(entity.getRabbitmqHost());
+            form.setRabbitmqPort(entity.getRabbitmqPort());
+            form.setRabbitmqVhost(entity.getRabbitmqVhost());
             form.setRabbitmqExchange(entity.getRabbitmqExchange());
             form.setRabbitmqUsername(entity.getRabbitmqUsername());
             form.setRabbitmqPassword(entity.getRabbitmqPassword());
@@ -90,6 +92,8 @@ public class GlobalPropertiesController {
         }
         this.globalPropertiesConfigService.set(form.getNotifierType(),
                                                form.getRabbitmqHost(),
+                                               form.getRabbitmqPort(),
+                                               form.getRabbitmqVhost(),
                                                form.getRabbitmqExchange(),
                                                form.getRabbitmqUsername(),
                                                form.getRabbitmqPassword(),

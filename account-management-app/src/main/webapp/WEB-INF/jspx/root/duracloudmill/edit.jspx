@@ -215,8 +215,45 @@
                   cssClass="error"
                   element="div" />
         </li>
+        
+        <li class="rabbitmq-config">
+          <form:label
+                  cssErrorClass="error"
+                  path="rabbitmqPort">
+            <spring:message
+                    code="duracloudmill.rabbitmqPort" />
+          </form:label>
 
+          <form:input
+                  class="rabbitmq-input"
+                  cssErrorClass="error"
+                  path="rabbitmqPort" />
 
+          <form:errors
+                  path="rabbitmqPort"
+                  cssClass="error"
+                  element="div" />
+        </li>
+
+        <li class="rabbitmq-config">
+          <form:label
+                  cssErrorClass="error"
+                  path="rabbitmqVhost">
+            <spring:message
+                    code="duracloudmill.rabbitmqVhost" />
+          </form:label>
+
+          <form:input
+                  class="rabbitmq-input"
+                  cssErrorClass="error"
+                  path="rabbitmqVhost" />
+
+          <form:errors
+                  path="rabbitmqVhost"
+                  cssClass="error"
+                  element="div" />
+        </li>
+        
         <li class="rabbitmq-config">
           <form:label
                   cssErrorClass="error"

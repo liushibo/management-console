@@ -84,6 +84,14 @@
 							<td><c:out value="${duracloudMill.rabbitmqHost}"/></td>
 						</tr>
 						<tr>
+							<td>RabbitMQ Port</td>
+							<td><c:out value="${duracloudMill.rabbitmqPort}"/></td>
+						</tr>
+						<tr>
+							<td>RabbitMQ Virtual Host</td>
+							<td><c:out value="${duracloudMill.rabbitmqVhost}"/></td>
+						</tr>
+						<tr>
 							<td>RabbitMQ Exchange</td>
 							<td><c:out value="${duracloudMill.rabbitmqExchange}"/></td>
 						</tr>
