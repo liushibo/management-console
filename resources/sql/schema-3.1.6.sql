@@ -96,6 +96,8 @@ CREATE TABLE `duracloud_mill` (
   `audit_queue` varchar(255) NOT NULL,
   `audit_queue_type` varchar(255) NOT NULL,
   `rabbitmq-host` varchar(255) NOT NULL,
+  `rabbitmq-port` int(11) NOT NULL,
+  `rabbitmq-vhost` varchar(255) NOT NULL,
   `rabbitmq-exchange` varchar(255) NOT NULL,
   `rabbitmq-username` varchar(255) NOT NULL,
   `rabbitmq-password` varchar(255) NOT NULL,

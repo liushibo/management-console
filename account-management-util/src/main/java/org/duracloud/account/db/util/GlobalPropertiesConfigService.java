@@ -23,6 +23,8 @@ public interface GlobalPropertiesConfigService {
     @Secured({"role:ROLE_ADMIN, scope:SELF_ACCT"})
     public void set(String notifierType,
                     String rabbitmqHost,
+                    Integer rabbitmqPort,
+                    String rabbitmqVhost,
                     String rabbitmqExchange,
                     String rabbitmqUsername,
                     String rabbitmqPassword,

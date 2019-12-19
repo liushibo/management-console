@@ -47,6 +47,8 @@ public class GlobalPropertiesConfigServiceImpl implements GlobalPropertiesConfig
     @Override
     public void set(String notifierType,
                     String rabbitmqHost,
+                    Integer rabbitmqPort,
+                    String rabbitmqVhost,
                     String rabbitmqExchange,
                     String rabbitmqUsername,
                     String rabbitmqPassword,
@@ -61,6 +63,8 @@ public class GlobalPropertiesConfigServiceImpl implements GlobalPropertiesConfig
 
         gp.setNotifierType(notifierType);
         gp.setRabbitmqHost(rabbitmqHost);
+        gp.setRabbitmqPort(rabbitmqPort);
+        gp.setRabbitmqVhost(rabbitmqVhost);
         gp.setRabbitmqExchange(rabbitmqExchange);
         gp.setRabbitmqUsername(rabbitmqUsername);
         gp.setRabbitmqPassword(rabbitmqPassword);

@@ -82,6 +82,43 @@
                         element="div" />
             </li>
 
+            <li class="rabbitmq-config">
+                <form:label
+                        cssErrorClass="error"
+                        path="rabbitmqPort">
+                    <spring:message
+                            code="globalproperties.rabbitmqPort" />
+                </form:label>
+
+                <form:input id="rabbitmq-port"
+                            class="rabbitmq-input"
+                            cssErrorClass="error"
+                            path="rabbitmqPort" />
+
+                <form:errors
+                        path="rabbitmqPort"
+                        cssClass="error"
+                        element="div" />
+            </li>
+
+            <li class="rabbitmq-config">
+                <form:label
+                        cssErrorClass="error"
+                        path="rabbitmqVhost">
+                    <spring:message
+                            code="globalproperties.rabbitmqVhost" />
+                </form:label>
+
+                <form:input id="rabbitmq-vhost"
+                            class="rabbitmq-input"
+                            cssErrorClass="error"
+                            path="rabbitmqVhost" />
+
+                <form:errors
+                        path="rabbitmqVhost"
+                        cssClass="error"
+                        element="div" />
+            </li>
 
             <li class="rabbitmq-config">
                 <form:label

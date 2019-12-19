@@ -32,6 +32,10 @@ public class DuracloudMillForm {
     @NotNull
     private String rabbitmqHost = "N/A";
     @NotNull
+    private Integer rabbitmqPort = 5672;
+    @NotNull
+    private String rabbitmqVhost = "/";
+    @NotNull
     private String rabbitmqExchange = "N/A";
     @NotNull
     private String rabbitmqUsername = "N/A";
@@ -108,6 +112,22 @@ public class DuracloudMillForm {
 
     public void setRabbitmqHost(String rabbitmqHost) {
         this.rabbitmqHost = rabbitmqHost;
+    }
+
+    public Integer getRabbitmqPort() {
+        return rabbitmqPort;
+    }
+
+    public void setRabbitmqPort(Integer rabbitmqPort) {
+        this.rabbitmqPort = rabbitmqPort;
+    }
+
+    public String getRabbitmqVhost() {
+        return rabbitmqVhost;
+    }
+
+    public void setRabbitmqVhost(String rabbitmqVhost) {
+        this.rabbitmqVhost = rabbitmqVhost;
     }
 
     public String getRabbitmqExchange() {
