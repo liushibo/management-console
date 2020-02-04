@@ -26,6 +26,8 @@ public class DuracloudMillForm {
     @NotNull
     private String auditQueue;
     @NotNull
+    private String awsType;
+    @NotNull
     private String auditLogSpaceId;
     @NotNull
     private String auditQueueType = "AWS";
@@ -41,6 +43,15 @@ public class DuracloudMillForm {
     private String rabbitmqUsername = "N/A";
     @NotNull
     private String rabbitmqPassword = "N/A";
+    @NotNull
+    private String awsAccessKey;
+    @NotNull
+    private String awsSecretKey;
+    @NotNull
+    private String awsRegion;
+    @NotNull
+    private String awsEndpoint;
+    private String awsSignerType;
 
     public String getDbHost() {
         return dbHost;
@@ -88,6 +99,14 @@ public class DuracloudMillForm {
 
     public void setAuditQueue(String auditQueue) {
         this.auditQueue = auditQueue;
+    }
+
+    public String getAwsType() {
+        return awsType;
+    }
+
+    public void setAwsType(String awsType) {
+        this.awsType = awsType;
     }
 
     public String getAuditLogSpaceId() {
@@ -152,5 +171,45 @@ public class DuracloudMillForm {
 
     public void setRabbitmqPassword(String rabbitmqPassword) {
         this.rabbitmqPassword = rabbitmqPassword;
+    }
+
+    public String getAwsAccessKey() {
+        return awsAccessKey;
+    }
+
+    public void setAwsAccessKey(String awsAccessKey) {
+        this.awsAccessKey = awsAccessKey;
+    }
+
+    public String getAwsSecretKey() {
+        return awsSecretKey;
+    }
+
+    public void setAwsSecretKey(String awsSecretKey) {
+        this.awsSecretKey = awsSecretKey;
+    }
+
+    public String getAwsRegion() {
+        return awsRegion;
+    }
+
+    public void setAwsRegion(String awsRegion) {
+        this.awsRegion = awsRegion;
+    }
+
+    public String getAwsEndpoint() {
+        return awsEndpoint;
+    }
+
+    public void setAwsEndpoint(String awsEndpoint) {
+        this.awsEndpoint = awsEndpoint;
+    }
+
+    public String getAwsSignerType() {
+        return awsSignerType;
+    }
+
+    public void setAwsSignerType(String awsSignerType) {
+        this.awsSignerType = awsSignerType;
     }
 }
