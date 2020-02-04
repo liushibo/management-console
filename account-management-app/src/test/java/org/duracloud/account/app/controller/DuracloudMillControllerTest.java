@@ -45,6 +45,7 @@ public class DuracloudMillControllerTest extends EasyMockSupport {
     String dbUsername = "user";
     String dbPassword = "password";
     String auditQueue = "auditQueue";
+    String awsType = "awstype";
     String auditLogSpaceId = "auditLogSpaceId";
     String auditQueueType = "AWS";
     String rabbitmqHost = "rmqhost";
@@ -53,6 +54,11 @@ public class DuracloudMillControllerTest extends EasyMockSupport {
     String rabbitmqExchange = "rmqexchange";
     String rabbitmqUsername = "rmqusername";
     String rabbitmqPassword = "rmqpassword";
+    String awsAccessKey = "awsaccesskey";
+    String awsSecretKey = "awssecretkey";
+    String awsRegion = "awsregion";
+    String awsEndpoint = "awsendpoint";
+    String awsSignerType = "awssignertype";
 
     @After
     public void tearDown() {
@@ -75,6 +81,7 @@ public class DuracloudMillControllerTest extends EasyMockSupport {
         expect(mill.getDbUsername()).andReturn(dbUsername);
         expect(mill.getDbPassword()).andReturn(dbPassword);
         expect(mill.getAuditQueue()).andReturn(auditQueue);
+        expect(mill.getAwsType()).andReturn(awsType);
         expect(mill.getAuditLogSpaceId()).andReturn(auditLogSpaceId);
         expect(mill.getAuditQueueType()).andReturn(auditQueueType);
         expect(mill.getRabbitmqHost()).andReturn(rabbitmqHost);
@@ -83,6 +90,11 @@ public class DuracloudMillControllerTest extends EasyMockSupport {
         expect(mill.getRabbitmqExchange()).andReturn(rabbitmqExchange);
         expect(mill.getRabbitmqUsername()).andReturn(rabbitmqUsername);
         expect(mill.getRabbitmqPassword()).andReturn(rabbitmqPassword);
+        expect(mill.getAwsAccessKey()).andReturn(awsAccessKey);
+        expect(mill.getAwsSecretKey()).andReturn(awsSecretKey);
+        expect(mill.getAwsRegion()).andReturn(awsRegion);
+        expect(mill.getAwsEndpoint()).andReturn(awsEndpoint);
+        expect(mill.getAwsSignerType()).andReturn(awsSignerType);
 
         expect(this.service.get()).andReturn(mill);
         replayAll();
@@ -94,6 +106,7 @@ public class DuracloudMillControllerTest extends EasyMockSupport {
         assertEquals(form.getDbUsername(), dbUsername);
         assertEquals(form.getDbPassword(), dbPassword);
         assertEquals(form.getAuditQueue(), auditQueue);
+        assertEquals(form.getAwsType(), awsType);
         assertEquals(form.getAuditLogSpaceId(), auditLogSpaceId);
         assertEquals(form.getAuditQueueType(), auditQueueType);
         assertEquals(form.getRabbitmqHost(), rabbitmqHost);
@@ -102,6 +115,11 @@ public class DuracloudMillControllerTest extends EasyMockSupport {
         assertEquals(form.getRabbitmqExchange(), rabbitmqExchange);
         assertEquals(form.getRabbitmqUsername(), rabbitmqUsername);
         assertEquals(form.getRabbitmqPassword(), rabbitmqPassword);
+        assertEquals(form.getAwsAccessKey(), awsAccessKey);
+        assertEquals(form.getAwsSecretKey(), awsSecretKey);
+        assertEquals(form.getAwsRegion(), awsRegion);
+        assertEquals(form.getAwsEndpoint(), awsEndpoint);
+        assertEquals(form.getAwsSignerType(), awsSignerType);
 
     }
 
@@ -126,6 +144,7 @@ public class DuracloudMillControllerTest extends EasyMockSupport {
         expect(form.getDbUsername()).andReturn(dbUsername);
         expect(form.getDbPassword()).andReturn(dbPassword);
         expect(form.getAuditQueue()).andReturn(auditQueue);
+        expect(form.getAwsType()).andReturn(awsType);
         expect(form.getAuditLogSpaceId()).andReturn(auditLogSpaceId);
         expect(form.getAuditQueueType()).andReturn(auditQueueType);
         expect(form.getRabbitmqHost()).andReturn(rabbitmqHost);
@@ -134,10 +153,16 @@ public class DuracloudMillControllerTest extends EasyMockSupport {
         expect(form.getRabbitmqExchange()).andReturn(rabbitmqExchange);
         expect(form.getRabbitmqUsername()).andReturn(rabbitmqUsername);
         expect(form.getRabbitmqPassword()).andReturn(rabbitmqPassword);
+        expect(form.getAwsAccessKey()).andReturn(awsAccessKey);
+        expect(form.getAwsSecretKey()).andReturn(awsSecretKey);
+        expect(form.getAwsRegion()).andReturn(awsRegion);
+        expect(form.getAwsEndpoint()).andReturn(awsEndpoint);
+        expect(form.getAwsSignerType()).andReturn(awsSignerType);
         this.service.set(dbHost, dbPort, dbName, dbUsername, dbPassword,
-                         auditQueue, auditLogSpaceId, auditQueueType,
+                         auditQueue, awsType, auditLogSpaceId, auditQueueType,
                          rabbitmqHost, rabbitmqPort, rabbitmqVhost,
-                         rabbitmqExchange, rabbitmqUsername, rabbitmqPassword);
+                         rabbitmqExchange, rabbitmqUsername, rabbitmqPassword,
+                         awsAccessKey, awsSecretKey, awsRegion, awsEndpoint, awsSignerType);
         expectLastCall();
 
         expect(

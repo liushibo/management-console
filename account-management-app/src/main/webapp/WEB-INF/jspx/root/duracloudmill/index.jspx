@@ -101,9 +101,27 @@
 						</tr>
 					</c:if>
 					<tr>
+						<td>Audit Log Type</td>
+						<td><c:out value="${duracloudMill.awsType}"/></td>
+					</tr>
+					<tr>
 						<td>Audit Log Space Id</td>
 						<td><c:out value="${duracloudMill.auditLogSpaceId}"/></td>
 					</tr>
+					<c:if test="${duracloudMill.awsType == 'SWIFT'}">
+						<tr>
+							<td>Swift Access Key</td>
+							<td><c:out value="${duracloudMill.awsAccessKey}"/></td>
+						</tr>
+						<tr>
+							<td>Swift Region</td>
+							<td><c:out value="${duracloudMill.awsRegion}"/></td>
+						</tr>
+						<tr>
+							<td>Swift Endpoint</td>
+							<td><c:out value="${duracloudMill.awsEndpoint}"/></td>
+						</tr>
+					</c:if>
 				</tbody>
 			</table>
 
