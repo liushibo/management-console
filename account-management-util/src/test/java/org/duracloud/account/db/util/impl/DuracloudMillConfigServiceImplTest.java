@@ -40,6 +40,7 @@ public class DuracloudMillConfigServiceImplTest extends EasyMockSupport {
     private static final String username = "username";
     private static final String password = "password";
     private static final String auditQueue = "auditQueue";
+    private static final String s3Type = "s3Type";
     private static final String auditLogSpaceId = "auditLogSpaceId";
     private static final String auditQueueType = "AWS";
     private static final String rabbitmqHost = "rmqhost";
@@ -84,7 +85,7 @@ public class DuracloudMillConfigServiceImplTest extends EasyMockSupport {
         expect(repo.save(EasyMock.capture(saveCapture))).andReturn(null);
         replayAll();
 
-        subject.set(host, port, name, username, password, auditQueue, auditLogSpaceId, auditQueueType,
+        subject.set(host, port, name, username, password, auditQueue, s3Type, auditLogSpaceId, auditQueueType,
                     rabbitmqHost, rabbitmqPort, rabbitmqVhost, rabbitmqExhange, rabbitmqUsername, rabbitmqPassword,
                     awsAccessKey, awsSecretKey, swiftEndpoint, swiftSignerType);
         DuracloudMill savedMill = saveCapture.getValue();
@@ -94,6 +95,7 @@ public class DuracloudMillConfigServiceImplTest extends EasyMockSupport {
         assertEquals(username, savedMill.getDbUsername());
         assertEquals(password, savedMill.getDbPassword());
         assertEquals(auditQueue, savedMill.getAuditQueue());
+        assertEquals(s3Type, savedMill.getS3Type());
         assertEquals(auditLogSpaceId, savedMill.getAuditLogSpaceId());
         assertEquals(auditQueueType, savedMill.getAuditQueueType());
         assertEquals(rabbitmqHost, savedMill.getRabbitmqHost());
@@ -127,6 +129,8 @@ public class DuracloudMillConfigServiceImplTest extends EasyMockSupport {
 
         entity.setAuditQueue(auditQueue);
         expectLastCall();
+        entity.setS3Type(s3Type);
+        expectLastCall();
         entity.setAuditLogSpaceId(auditLogSpaceId);
         expectLastCall();
         entity.setAuditQueueType(auditQueueType);
@@ -154,7 +158,7 @@ public class DuracloudMillConfigServiceImplTest extends EasyMockSupport {
         expectLastCall();
         replayAll();
 
-        subject.set(host, port, name, username, password, auditQueue, auditLogSpaceId, auditQueueType,
+        subject.set(host, port, name, username, password, auditQueue, s3Type, auditLogSpaceId, auditQueueType,
                     rabbitmqHost, rabbitmqPort, rabbitmqVhost, rabbitmqExhange, rabbitmqUsername, rabbitmqPassword,
                     awsAccessKey, awsSecretKey, swiftEndpoint, swiftSignerType);
     }

@@ -26,6 +26,8 @@ public class DuracloudMillForm {
     @NotNull
     private String auditQueue;
     @NotNull
+    private String s3Type;
+    @NotNull
     private String auditLogSpaceId;
     @NotNull
     private String auditQueueType = "AWS";
@@ -95,6 +97,14 @@ public class DuracloudMillForm {
 
     public void setAuditQueue(String auditQueue) {
         this.auditQueue = auditQueue;
+    }
+
+    public String getS3Type() {
+        return s3Type;
+    }
+
+    public void setS3Type(String s3Type) {
+        this.s3Type = s3Type;
     }
 
     public String getAuditLogSpaceId() {

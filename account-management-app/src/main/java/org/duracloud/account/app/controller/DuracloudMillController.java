@@ -64,6 +64,7 @@ public class DuracloudMillController {
             form.setDbUsername(entity.getDbUsername());
             form.setDbPassword(entity.getDbPassword());
             form.setAuditQueue(entity.getAuditQueue());
+            form.setS3Type(entity.getS3Type());
             form.setAuditLogSpaceId(entity.getAuditLogSpaceId());
             form.setAuditQueueType(entity.getAuditQueueType());
             form.setRabbitmqHost(entity.getRabbitmqHost());
@@ -101,6 +102,7 @@ public class DuracloudMillController {
                                             form.getDbUsername(),
                                             form.getDbPassword(),
                                             form.getAuditQueue(),
+                                            form.getS3Type(),
                                             form.getAuditLogSpaceId(),
                                             form.getAuditQueueType(),
                                             form.getRabbitmqHost(),

@@ -45,6 +45,7 @@ public class DuracloudMillControllerTest extends EasyMockSupport {
     String dbUsername = "user";
     String dbPassword = "password";
     String auditQueue = "auditQueue";
+    String s3Type = "s3type";
     String auditLogSpaceId = "auditLogSpaceId";
     String auditQueueType = "AWS";
     String rabbitmqHost = "rmqhost";
@@ -79,6 +80,7 @@ public class DuracloudMillControllerTest extends EasyMockSupport {
         expect(mill.getDbUsername()).andReturn(dbUsername);
         expect(mill.getDbPassword()).andReturn(dbPassword);
         expect(mill.getAuditQueue()).andReturn(auditQueue);
+        expect(mill.getS3Type()).andReturn(s3Type);
         expect(mill.getAuditLogSpaceId()).andReturn(auditLogSpaceId);
         expect(mill.getAuditQueueType()).andReturn(auditQueueType);
         expect(mill.getRabbitmqHost()).andReturn(rabbitmqHost);
@@ -102,6 +104,7 @@ public class DuracloudMillControllerTest extends EasyMockSupport {
         assertEquals(form.getDbUsername(), dbUsername);
         assertEquals(form.getDbPassword(), dbPassword);
         assertEquals(form.getAuditQueue(), auditQueue);
+        assertEquals(form.getS3Type(), s3Type);
         assertEquals(form.getAuditLogSpaceId(), auditLogSpaceId);
         assertEquals(form.getAuditQueueType(), auditQueueType);
         assertEquals(form.getRabbitmqHost(), rabbitmqHost);
@@ -138,6 +141,7 @@ public class DuracloudMillControllerTest extends EasyMockSupport {
         expect(form.getDbUsername()).andReturn(dbUsername);
         expect(form.getDbPassword()).andReturn(dbPassword);
         expect(form.getAuditQueue()).andReturn(auditQueue);
+        expect(form.getS3Type()).andReturn(s3Type);
         expect(form.getAuditLogSpaceId()).andReturn(auditLogSpaceId);
         expect(form.getAuditQueueType()).andReturn(auditQueueType);
         expect(form.getRabbitmqHost()).andReturn(rabbitmqHost);
@@ -151,7 +155,7 @@ public class DuracloudMillControllerTest extends EasyMockSupport {
         expect(form.getSwiftEndpoint()).andReturn(swiftEndpoint);
         expect(form.getSwiftSignerType()).andReturn(swiftSignerType);
         this.service.set(dbHost, dbPort, dbName, dbUsername, dbPassword,
-                         auditQueue, auditLogSpaceId, auditQueueType,
+                         auditQueue, s3Type, auditLogSpaceId, auditQueueType,
                          rabbitmqHost, rabbitmqPort, rabbitmqVhost,
                          rabbitmqExchange, rabbitmqUsername, rabbitmqPassword,
                          awsAccessKey, awsSecretKey, swiftEndpoint, swiftSignerType);

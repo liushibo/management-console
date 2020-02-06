@@ -304,18 +304,19 @@
 
       <ol>
         <li>
-          <form:label
-                  cssErrorClass="error">
+          <form:label cssErrorClass="error"
+                      path="s3Type">
             <spring:message
                     code="duracloudmill.s3type" />
           </form:label>
 
-          <form:select id="logtype" cssErrorClass="error">
+          <form:select id="logtype" cssErrorClass="error" path="s3Type">
             <form:option value="AWS" label="AWS"/>
             <form:option value="SWIFT" label="Swift" />
           </form:select>
 
           <form:errors
+                  path="s3Type"
                   cssClass="error"
                   element="div" />
         </li>
@@ -401,7 +402,7 @@
                   cssErrorClass="error"
                   path="swiftSignerType">
             <spring:message
-                    code="duracloudmill.awssignertype" />
+                    code="duracloudmill.swiftsignertype" />
           </form:label>
 
           <form:input

@@ -102,11 +102,7 @@
 					</c:if>
 					<tr>
 						<td>Audit Log Type</td>
-						<c:choose>
-							<c:when test="${duracloudMill.swiftEndpoint != null}"><td>Swift</td></c:when>
-							<c:when test="${duracloudMill.swiftEndpoint == null}"><td>AWS</td></c:when>
-							<c:otherwise></c:otherwise>
-						</c:choose>
+						<td><c:out value="${duracloudMill.s3Type}"/></td>
 					</tr>
 					<tr>
 						<td>Audit Log Space Id</td>

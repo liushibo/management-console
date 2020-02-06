@@ -98,6 +98,7 @@ DROP TABLE IF EXISTS `duracloud_mill`;
 CREATE TABLE `duracloud_mill` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `modified` datetime DEFAULT NULL,
+  `s3_type` varchar(255) NOT NULL,
   `audit_log_space_id` varchar(255) NOT NULL,
   `audit_queue` varchar(255) NOT NULL,
   `audit_queue_type` varchar(255) DEFAULT 'AWS',
