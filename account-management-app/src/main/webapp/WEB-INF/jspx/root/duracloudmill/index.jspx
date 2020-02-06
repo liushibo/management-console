@@ -119,7 +119,7 @@
 						</tr>
 						<tr>
 							<td>Swift Endpoint</td>
-							<td><c:out value="${duracloudMill.awsEndpoint}"/></td>
+							<td><c:out value="${duracloudMill.swiftEndpoint}"/></td>
 						</tr>
 					</c:if>
 				</tbody>

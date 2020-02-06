@@ -86,7 +86,7 @@ public class DuracloudMillConfigServiceImplTest extends EasyMockSupport {
 
         subject.set(host, port, name, username, password, auditQueue, auditLogSpaceId, auditQueueType,
                     rabbitmqHost, rabbitmqPort, rabbitmqVhost, rabbitmqExhange, rabbitmqUsername, rabbitmqPassword,
-                    awsAccessKey, awsSecretKey, awsEndpoint, awsSignerType);
+                    awsAccessKey, awsSecretKey, swiftEndpoint, swiftSignerType);
         DuracloudMill savedMill = saveCapture.getValue();
         assertEquals(host, savedMill.getDbHost());
         assertEquals(port, savedMill.getDbPort());
