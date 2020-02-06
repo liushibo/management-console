@@ -27,7 +27,6 @@ public interface DuracloudMillConfigService {
                     String dbUsername,
                     String dbPassword,
                     String auditQueue,
-                    String awsType,
                     String auditLogId,
                     String auditQueueType,
                     String rabbitmqHost,
@@ -38,8 +37,7 @@ public interface DuracloudMillConfigService {
                     String rabbitmqPassword,
                     String awsAccessKey,
                     String awsSecretKey,
-                    String awsRegion,
-                    String awsEndpoint,
-                    String awsSignerType);
+                    String swiftEndpoint,
+                    String swiftSignerType);
 
 }

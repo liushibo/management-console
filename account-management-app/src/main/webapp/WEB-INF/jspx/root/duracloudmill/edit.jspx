@@ -305,19 +305,17 @@
       <ol>
         <li>
           <form:label
-                  cssErrorClass="error"
-                  path="awsType">
+                  cssErrorClass="error">
             <spring:message
-                    code="duracloudmill.awstype" />
+                    code="duracloudmill.s3type" />
           </form:label>
 
-          <form:select id="logtype" cssErrorClass="error" path="awsType">
+          <form:select id="logtype" cssErrorClass="error">
             <form:option value="AWS" label="AWS"/>
             <form:option value="SWIFT" label="Swift" />
           </form:select>
 
           <form:errors
-                  path="awsType"
                   cssClass="error"
                   element="div" />
         </li>
@@ -367,8 +365,9 @@
                     code="duracloudmill.awssecretkey" />
           </form:label>
 
-          <form:input
+          <form:password
                   class="swift-input"
+                  showPassword="true"
                   cssErrorClass="error"
                   path="awsSecretKey" />
 
@@ -381,18 +380,18 @@
         <li class="swift-config">
           <form:label
                   cssErrorClass="error"
-                  path="awsRegion">
+                  path="swiftEndpoint">
             <spring:message
-                    code="duracloudmill.awsregion" />
+                    code="duracloudmill.swiftendpoint" />
           </form:label>
 
           <form:input
                   class="swift-input"
                   cssErrorClass="error"
-                  path="awsRegion" />
+                  path="swiftEndpoint" />
 
           <form:errors
-                  path="awsRegion"
+                  path="swiftEndpoint"
                   cssClass="error"
                   element="div" />
         </li>
@@ -400,26 +399,7 @@
         <li class="swift-config">
           <form:label
                   cssErrorClass="error"
-                  path="awsEndpoint">
-            <spring:message
-                    code="duracloudmill.awsendpoint" />
-          </form:label>
-
-          <form:input
-                  class="swift-input"
-                  cssErrorClass="error"
-                  path="awsEndpoint" />
-
-          <form:errors
-                  path="awsEndpoint"
-                  cssClass="error"
-                  element="div" />
-        </li>
-
-        <li class="swift-config">
-          <form:label
-                  cssErrorClass="error"
-                  path="awsSignerType">
+                  path="swiftSignerType">
             <spring:message
                     code="duracloudmill.awssignertype" />
           </form:label>
@@ -427,10 +407,10 @@
           <form:input
                   class="swift-input"
                   cssErrorClass="error"
-                  path="awsSignerType" />
+                  path="swiftSignerType" />
 
           <form:errors
-                  path="awsSignerType"
+                  path="swiftSignerType"
                   cssClass="error"
                   element="div" />
         </li>

@@ -114,10 +114,8 @@ CREATE TABLE `duracloud_mill` (
   `db_username` varchar(255) NOT NULL,
   `aws_access_key` varchar(255) DEFAULT NULL,
   `aws_secret_key` varchar(255) DEFAULT NULL,
-  `aws_endpoint` varchar(255) DEFAULT NULL,
-  `aws_signer_type` varchar(255) DEFAULT NULL,
-  `aws_region` varchar(255) DEFAULT NULL,
-  `aws_type` varchar(255) DEFAULT NULL,
+  `swift_endpoint` varchar(255) DEFAULT NULL,
+  `swift_signer_type` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;

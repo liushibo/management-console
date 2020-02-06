@@ -26,8 +26,6 @@ public class DuracloudMillForm {
     @NotNull
     private String auditQueue;
     @NotNull
-    private String awsType;
-    @NotNull
     private String auditLogSpaceId;
     @NotNull
     private String auditQueueType = "AWS";
@@ -48,10 +46,8 @@ public class DuracloudMillForm {
     @NotNull
     private String awsSecretKey;
     @NotNull
-    private String awsRegion;
-    @NotNull
-    private String awsEndpoint;
-    private String awsSignerType;
+    private String swiftEndpoint;
+    private String swiftSignerType;
 
     public String getDbHost() {
         return dbHost;
@@ -99,14 +95,6 @@ public class DuracloudMillForm {
 
     public void setAuditQueue(String auditQueue) {
         this.auditQueue = auditQueue;
-    }
-
-    public String getAwsType() {
-        return awsType;
-    }
-
-    public void setAwsType(String awsType) {
-        this.awsType = awsType;
     }
 
     public String getAuditLogSpaceId() {
@@ -189,27 +177,19 @@ public class DuracloudMillForm {
         this.awsSecretKey = awsSecretKey;
     }
 
-    public String getAwsRegion() {
-        return awsRegion;
+    public String getSwiftEndpoint() {
+        return swiftEndpoint;
     }
 
-    public void setAwsRegion(String awsRegion) {
-        this.awsRegion = awsRegion;
+    public void setSwiftEndpoint(String swiftEndpoint) {
+        this.swiftEndpoint = swiftEndpoint;
     }
 
-    public String getAwsEndpoint() {
-        return awsEndpoint;
+    public String getSwiftSignerType() {
+        return swiftSignerType;
     }
 
-    public void setAwsEndpoint(String awsEndpoint) {
-        this.awsEndpoint = awsEndpoint;
-    }
-
-    public String getAwsSignerType() {
-        return awsSignerType;
-    }
-
-    public void setAwsSignerType(String awsSignerType) {
-        this.awsSignerType = awsSignerType;
+    public void setSwiftSignerType(String swiftSignerType) {
+        this.swiftSignerType = swiftSignerType;
     }
 }

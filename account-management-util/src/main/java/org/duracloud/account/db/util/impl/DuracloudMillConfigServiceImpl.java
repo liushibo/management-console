@@ -51,7 +51,6 @@ public class DuracloudMillConfigServiceImpl implements DuracloudMillConfigServic
                     String dbUsername,
                     String dbPassword,
                     String auditQueue,
-                    String awsType,
                     String auditLogSpaceId,
                     String auditQueueType,
                     String rabbitmqHost,
@@ -62,9 +61,8 @@ public class DuracloudMillConfigServiceImpl implements DuracloudMillConfigServic
                     String rabbitmqPassword,
                     String awsAccessKey,
                     String awsSecretKey,
-                    String awsRegion,
-                    String awsEndpoint,
-                    String awsSignerType) {
+                    String swiftEndpoint,
+                    String swiftSignerType) {
         DuracloudMill dm = get();
         if (null == dm) {
             dm = new DuracloudMill();
@@ -76,7 +74,6 @@ public class DuracloudMillConfigServiceImpl implements DuracloudMillConfigServic
         dm.setDbUsername(dbUsername);
         dm.setDbPassword(dbPassword);
         dm.setAuditQueue(auditQueue);
-        dm.setAwsType(awsType);
         dm.setAuditLogSpaceId(auditLogSpaceId);
         dm.setAuditQueueType(auditQueueType);
         dm.setRabbitmqHost(rabbitmqHost);
@@ -87,9 +84,8 @@ public class DuracloudMillConfigServiceImpl implements DuracloudMillConfigServic
         dm.setRabbitmqPassword(rabbitmqPassword);
         dm.setAwsAccessKey(awsAccessKey);
         dm.setAwsSecretKey(awsSecretKey);
-        dm.setAwsRegion(awsRegion);
-        dm.setAwsEndpoint(awsEndpoint);
-        dm.setAwsSignerType(awsSignerType);
+        dm.setSwiftEndpoint(swiftEndpoint);
+        dm.setSwiftSignerType(swiftSignerType);
         repo.save(dm);
 
     }

@@ -64,7 +64,6 @@ public class DuracloudMillController {
             form.setDbUsername(entity.getDbUsername());
             form.setDbPassword(entity.getDbPassword());
             form.setAuditQueue(entity.getAuditQueue());
-            form.setAwsType(entity.getAwsType());
             form.setAuditLogSpaceId(entity.getAuditLogSpaceId());
             form.setAuditQueueType(entity.getAuditQueueType());
             form.setRabbitmqHost(entity.getRabbitmqHost());
@@ -75,9 +74,8 @@ public class DuracloudMillController {
             form.setRabbitmqPassword(entity.getRabbitmqPassword());
             form.setAwsAccessKey(entity.getAwsAccessKey());
             form.setAwsSecretKey(entity.getAwsSecretKey());
-            form.setAwsRegion(entity.getAwsRegion());
-            form.setAwsEndpoint(entity.getAwsEndpoint());
-            form.setAwsSignerType(entity.getAwsSignerType());
+            form.setSwiftEndpoint(entity.getSwiftEndpoint());
+            form.setSwiftSignerType(entity.getSwiftSignerType());
             return form;
         }
     }
@@ -103,7 +101,6 @@ public class DuracloudMillController {
                                             form.getDbUsername(),
                                             form.getDbPassword(),
                                             form.getAuditQueue(),
-                                            form.getAwsType(),
                                             form.getAuditLogSpaceId(),
                                             form.getAuditQueueType(),
                                             form.getRabbitmqHost(),
@@ -114,9 +111,8 @@ public class DuracloudMillController {
                                             form.getRabbitmqPassword(),
                                             form.getAwsAccessKey(),
                                             form.getAwsSecretKey(),
-                                            form.getAwsRegion(),
-                                            form.getAwsEndpoint(),
-                                            form.getAwsSignerType());
+                                            form.getSwiftEndpoint(),
+                                            form.getSwiftSignerType());
         UserFeedbackUtil.addSuccessFlash("Successfully updated!", redirectAttributes);
         return new ModelAndView(new RedirectView(BASE_MAPPING, true));
     }
