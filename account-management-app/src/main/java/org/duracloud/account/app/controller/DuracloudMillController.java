@@ -73,10 +73,6 @@ public class DuracloudMillController {
             form.setRabbitmqExchange(entity.getRabbitmqExchange());
             form.setRabbitmqUsername(entity.getRabbitmqUsername());
             form.setRabbitmqPassword(entity.getRabbitmqPassword());
-            form.setAwsAccessKey(entity.getAwsAccessKey());
-            form.setAwsSecretKey(entity.getAwsSecretKey());
-            form.setSwiftEndpoint(entity.getSwiftEndpoint());
-            form.setSwiftSignerType(entity.getSwiftSignerType());
             return form;
         }
     }
@@ -102,7 +98,6 @@ public class DuracloudMillController {
                                             form.getDbUsername(),
                                             form.getDbPassword(),
                                             form.getAuditQueue(),
-                                            form.getS3Type(),
                                             form.getAuditLogSpaceId(),
                                             form.getAuditQueueType(),
                                             form.getRabbitmqHost(),
@@ -110,11 +105,7 @@ public class DuracloudMillController {
                                             form.getRabbitmqVhost(),
                                             form.getRabbitmqExchange(),
                                             form.getRabbitmqUsername(),
-                                            form.getRabbitmqPassword(),
-                                            form.getAwsAccessKey(),
-                                            form.getAwsSecretKey(),
-                                            form.getSwiftEndpoint(),
-                                            form.getSwiftSignerType());
+                                            form.getRabbitmqPassword());
         UserFeedbackUtil.addSuccessFlash("Successfully updated!", redirectAttributes);
         return new ModelAndView(new RedirectView(BASE_MAPPING, true));
     }
