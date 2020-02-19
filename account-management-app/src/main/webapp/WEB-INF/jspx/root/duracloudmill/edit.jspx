@@ -32,13 +32,13 @@
     <tiles:putAttribute
      name="mainContent"
      cascade="true">
-     
+
 
   <form:form
    modelAttribute="duracloudMill"
    method="POST">
    <jsp:include page="/WEB-INF/jspx/includes/csrf.jspx"/>
-                            
+
     <fieldset>
       <legend>
         Database
@@ -197,7 +197,7 @@
                   cssClass="error"
                   element="div" />
         </li>
-        
+
         <li class="rabbitmq-config">
           <form:label
                   cssErrorClass="error"
@@ -235,7 +235,7 @@
                   cssClass="error"
                   element="div" />
         </li>
-        
+
         <li class="rabbitmq-config">
           <form:label
                   cssErrorClass="error"
@@ -304,24 +304,6 @@
 
       <ol>
         <li>
-          <form:label cssErrorClass="error"
-                      path="s3Type">
-            <spring:message
-                    code="duracloudmill.s3type" />
-          </form:label>
-
-          <form:select id="logtype" cssErrorClass="error" path="s3Type">
-            <form:option value="AWS" label="AWS"/>
-            <form:option value="SWIFT" label="Swift" />
-          </form:select>
-
-          <form:errors
-                  path="s3Type"
-                  cssClass="error"
-                  element="div" />
-        </li>
-
-        <li>
           <form:label
                   cssErrorClass="error"
                   path="auditLogSpaceId">
@@ -338,201 +320,6 @@
                   cssClass="error"
                   element="div" />
         </li>
-
-        <li class="swift-config">
-          <form:label
-                  cssErrorClass="error"
-                  path="awsAccessKey">
-            <spring:message
-                    code="duracloudmill.awsaccesskey" />
-          </form:label>
-
-          <form:input
-                  class="swift-input"
-                  cssErrorClass="error"
-                  path="awsAccessKey" />
-
-          <form:errors
-                  path="awsAccessKey"
-                  cssClass="error"
-                  element="div" />
-        </li>
-
-        <li class="swift-config">
-          <form:label
-                  cssErrorClass="error"
-                  path="awsSecretKey">
-            <spring:message
-                    code="duracloudmill.awssecretkey" />
-          </form:label>
-
-          <form:password
-                  class="swift-input"
-                  showPassword="true"
-                  cssErrorClass="error"
-                  path="awsSecretKey" />
-
-          <form:errors
-                  path="awsSecretKey"
-                  cssClass="error"
-                  element="div" />
-        </li>
-
-        <li class="swift-config">
-          <form:label
-                  cssErrorClass="error"
-                  path="swiftEndpoint">
-            <spring:message
-                    code="duracloudmill.swiftendpoint" />
-          </form:label>
-
-          <form:input
-                  class="swift-input"
-                  cssErrorClass="error"
-                  path="swiftEndpoint" />
-
-          <form:errors
-                  path="swiftEndpoint"
-                  cssClass="error"
-                  element="div" />
-        </li>
-
-        <li class="swift-config">
-          <form:label
-                  cssErrorClass="error"
-                  path="swiftSignerType">
-            <spring:message
-                    code="duracloudmill.swiftsignertype" />
-          </form:label>
-
-          <form:input
-                  class="swift-input"
-                  cssErrorClass="error"
-                  path="swiftSignerType" />
-
-          <form:errors
-                  path="swiftSignerType"
-                  cssClass="error"
-                  element="div" />
-        </li>
-
-        <li class="rabbitmq-config">
-          <form:label
-                  cssErrorClass="error"
-                  path="rabbitmqHost">
-            <spring:message
-                    code="duracloudmill.rabbitmqHost" />
-          </form:label>
-
-          <form:input
-                  class="rabbitmq-input"
-                  cssErrorClass="error"
-                  path="rabbitmqHost" />
-
-          <form:errors
-                  path="rabbitmqHost"
-                  cssClass="error"
-                  element="div" />
-        </li>
-        
-        <li class="rabbitmq-config">
-          <form:label
-                  cssErrorClass="error"
-                  path="rabbitmqPort">
-            <spring:message
-                    code="duracloudmill.rabbitmqPort" />
-          </form:label>
-
-          <form:input
-                  class="rabbitmq-input"
-                  cssErrorClass="error"
-                  path="rabbitmqPort" />
-
-          <form:errors
-                  path="rabbitmqPort"
-                  cssClass="error"
-                  element="div" />
-        </li>
-
-        <li class="rabbitmq-config">
-          <form:label
-                  cssErrorClass="error"
-                  path="rabbitmqVhost">
-            <spring:message
-                    code="duracloudmill.rabbitmqVhost" />
-          </form:label>
-
-          <form:input
-                  class="rabbitmq-input"
-                  cssErrorClass="error"
-                  path="rabbitmqVhost" />
-
-          <form:errors
-                  path="rabbitmqVhost"
-                  cssClass="error"
-                  element="div" />
-        </li>
-        
-        <li class="rabbitmq-config">
-          <form:label
-                  cssErrorClass="error"
-                  path="rabbitmqExchange">
-            <spring:message
-                    code="duracloudmill.rabbitmqExchange" />
-          </form:label>
-
-          <form:input
-                  class="rabbitmq-input"
-                  cssErrorClass="error"
-                  path="rabbitmqExchange" />
-
-          <form:errors
-                  path="rabbitmqExchange"
-                  cssClass="error"
-                  element="div" />
-        </li>
-
-
-        <li class="rabbitmq-config">
-          <form:label
-                  cssErrorClass="error"
-                  path="rabbitmqUsername">
-            <spring:message
-                    code="duracloudmill.rabbitmqUsername" />
-          </form:label>
-
-          <form:input
-                  class="rabbitmq-input"
-                  cssErrorClass="error"
-                  path="rabbitmqUsername" />
-
-          <form:errors
-                  path="rabbitmqUsername"
-                  cssClass="error"
-                  element="div" />
-        </li>
-
-
-        <li class="rabbitmq-config">
-          <form:label
-                  cssErrorClass="error"
-                  path="rabbitmqPassword">
-            <spring:message
-                    code="duracloudmill.rabbitmqPassword" />
-          </form:label>
-
-          <form:password
-                  class="rabbitmq-input"
-                  showPassword="true"
-                  cssErrorClass="error"
-                  path="rabbitmqPassword" />
-
-          <form:errors
-                  path="rabbitmqPassword"
-                  cssClass="error"
-                  element="div" />
-        </li>
-
       </ol>
     </fieldset>
 
@@ -556,8 +343,8 @@
       </a>
     </fieldset>
   </form:form>
-     
-     
+
+
     </tiles:putAttribute>
   </tiles:insertDefinition>
 </jsp:root>
