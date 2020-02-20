@@ -3,14 +3,14 @@ $(document).ready(function () {
         $(".rabbitmq-config").each(function() {
             $(this).hide();
         });
-        autofill(".rabbitmq-input", "", "N/A");
-        autofill(".cloudfront-input", "", "N/A");
+//        autofill(".rabbitmq-input", "", "N/A");
+//        autofill(".cloudfront-input", "", "N/A");
     }else{
         $(".aws-config").each(function() {
             $(this).hide();
         });
-        autofill(".aws-input", "", "N/A");
-        autofill(".cloudfront-input", "", "N/A");
+ //       autofill(".aws-input", "", "N/A");
+ //       autofill(".cloudfront-input", "", "N/A");
     }
     $("#notifiertype").change(function () {
         if ($(this).val() == "AWS") {
@@ -20,8 +20,8 @@ $(document).ready(function () {
             $(".aws-config").each(function() {
                 $(this).show();
             });
-            autofill(".rabbitmq-input", "", "N/A");
-            autofill(".aws-input", "N/A", "");
+ //           autofill(".rabbitmq-input", "", "N/A");
+ //           autofill(".aws-input", "N/A", "");
         }
         else {
             $(".aws-config").each(function() {
@@ -30,8 +30,8 @@ $(document).ready(function () {
             $(".rabbitmq-config").each(function() {
                 $(this).show();
             });
-            autofill(".aws-input", "", "N/A");
-            autofill(".rabbitmq-input", "N/A", "");
+ //           autofill(".aws-input", "", "N/A");
+ //           autofill(".rabbitmq-input", "N/A", "");
         }
     });
 
