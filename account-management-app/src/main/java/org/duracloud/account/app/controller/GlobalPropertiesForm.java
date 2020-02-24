@@ -36,16 +36,18 @@ public class GlobalPropertiesForm {
 
     private Boolean settingRabbitMQ() {
         Boolean rmqStatus = this.notifierType.equalsIgnoreCase("RabbitMQ");
-        System.out.println(rmqStatus.toString());
         return rmqStatus;
-    }
-
-    public String getNotifierType() {
-        return notifierType;
     }
 
     public void setNotifierType(String notifierType) {
         this.notifierType = notifierType;
+        if (notifierType.equalsIgnoreCase("RabbitMQ")) {
+            setInstanceNotificationTopicArn(null);
+        }
+    }
+
+    public String getNotifierType() {
+        return notifierType;
     }
 
     public String getRabbitmqHost() {
@@ -149,17 +151,7 @@ public class GlobalPropertiesForm {
     }
 
     public void setInstanceNotificationTopicArn(String instanceNotificationTopicArn) {
-        if (settingRabbitMQ() == false) {
-            System.out.println("Should fire if false");
-            System.out.println(instanceNotificationTopicArn);
-            if (instanceNotificationTopicArn == null) {
-                throw nullConstraintViolationException();
-            } else {
-                this.instanceNotificationTopicArn = instanceNotificationTopicArn;
-            }
-        } else {
-            this.instanceNotificationTopicArn = null;
-        }
+        this.instanceNotificationTopicArn = instanceNotificationTopicArn;
     }
 
     public String getCloudFrontAccountId() {
